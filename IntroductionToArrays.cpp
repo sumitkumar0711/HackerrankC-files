@@ -5,8 +5,8 @@
 #include <algorithm>
 using namespace std;
 
-
-int main() {
+int main() 
+{
     int c,d,n,a[10000],b[10000];
     cin>>n;
     for(c=0;c<n;c++)
