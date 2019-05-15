@@ -6,14 +6,17 @@
 #include <algorithm>
 using namespace std;
 
-int main() {
+int main() 
+{
   int iCount;
   set<int> ss;
   cin >> iCount;
-  for (int i = 0; i < iCount; ++i) {
+  for (int i = 0; i < iCount; ++i) 
+  {
     int type, query;
     cin >> type >> query;
-    switch (type) {
+    switch (type) 
+    {
     case 1:
       ss.insert(query);
       break;
