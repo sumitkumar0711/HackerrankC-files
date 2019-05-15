@@ -5,19 +5,24 @@
 #include <algorithm>
 using namespace std;
 
-
-int main() {
+int main() 
+{
   vector<int> v;
   int size;
   cin >> size;
   int a;
-  for (int i = 0; i < size; i++) {
+  for (int i = 0; i < size; i++) 
+  {
     cin >> a;
     v.push_back(a);
   }
   sort(v.begin(), v.end());
-  for (int i = 0; i < size; i++) {
+  for (int i = 0; i < size; i++) 
+  {
     cout << v[i] << " ";
-  } /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+  } 
+  
+  /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+  
   return 0;
 }
