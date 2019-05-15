@@ -2,14 +2,11 @@
 
 using namespace std;
 
-
-
 int main()
 {
     int n;
     cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
     if (n == 1)
         printf("one");
     else if(n == 2)
