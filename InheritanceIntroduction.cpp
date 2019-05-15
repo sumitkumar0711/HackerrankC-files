@@ -5,10 +5,11 @@
 #include <algorithm>
 using namespace std;
 
-
-class Triangle{
+class Triangle
+{
     public:
-    	void triangle(){
+    	void triangle()
+        {
      		cout<<"I am a triangle\n";
     	}
     public:
@@ -18,19 +19,22 @@ class Triangle{
         }
 };
 
-class Isosceles : public Triangle{
+class Isosceles : public Triangle
+{
     public:
-    	void isosceles(){
+    	void isosceles()
+        {
     		cout<<"I am an isosceles triangle\n";
     	}
-  		//Write your code here.
+  		
+        //Write your code here.
 };
 
-int main(){
+int main()
+{
     Isosceles isc;
     isc.isosceles();
   	isc.description();
     isc.triangle();
     return 0;
 }
-
