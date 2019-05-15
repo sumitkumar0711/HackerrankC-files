@@ -7,20 +7,23 @@
 #include <algorithm>
 using namespace std;
 
-
-int main() {
+int main() 
+{
   int q;
   cin >> q;
   string name;
   map<string, int> notes;
-  for (int i(0), type(0), note(0); i < q; ++i) {
+  for (int i(0), type(0), note(0); i < q; ++i) 
+  {
     cin >> type >> name;
-    switch (type) {
-    case 1: {
-      cin >> note;
-      notes[name] += note;
-      break;
-    }
+    switch (type) 
+    {
+    case 1: 
+        {
+          cin >> note;
+          notes[name] += note;
+          break;
+        }
     case 2:
       notes[name] = 0;
       break;
@@ -31,6 +34,3 @@ int main() {
   }
   return 0;
 }
-
-
-
