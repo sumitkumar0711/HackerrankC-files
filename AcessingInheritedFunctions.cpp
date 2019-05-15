@@ -5,15 +5,16 @@ using namespace std;
 class A
 {
     public:
-        A(){
+        A()
+        {
             callA = 0;
         }
     private:
         int callA;
-        void inc(){
+        void inc()
+        {
             callA++;
         }
-
     protected:
         void func(int & a)
         {
@@ -21,7 +22,8 @@ class A
             inc();
         }
     public:
-        int getA(){
+        int getA()
+        {
             return callA;
         }
 };
@@ -29,12 +31,14 @@ class A
 class B
 {
     public:
-        B(){
+        B()
+        {
             callB = 0;
         }
     private:
         int callB;
-        void inc(){
+        void inc()
+        {
             callB++;
         }
     protected:
@@ -44,7 +48,8 @@ class B
             inc();
         }
     public:
-        int getB(){
+        int getB()
+        {
             return callB;
         }
 };
@@ -52,12 +57,14 @@ class B
 class C
 {
     public:
-        C(){
+        C()
+        {
             callC = 0;
         }
     private:
         int callC;
-        void inc(){
+        void inc()
+        {
             callC++;
         }
     protected:
@@ -67,7 +74,8 @@ class C
             inc();
         }
     public:
-        int getC(){
+        int getC()
+        {
             return callC;
         }
 };
@@ -76,8 +84,9 @@ class D: public A, public B, public C
     int val;
     public:
         //Initially val is 1
-         D():val(1){}
-
+         D():val(1)
+         {
+         }
          //Implement this function
          void update_val(int new_val)
          {
@@ -88,13 +97,11 @@ class D: public A, public B, public C
                      A::func(val);
                      new_val /= 2;
                  }
-                 
                  if(new_val%3 == 0)
                  {
                      B::func(val);
                      new_val /= 3;
                  }
-                 
                  if(new_val%5 == 0)
                  {
                      C::func(val);
@@ -102,10 +109,8 @@ class D: public A, public B, public C
                  }
              }
          }
-    
          void check(int); //Do not delete this line.
 };
-
 
 void D::check(int new_val)
 {
@@ -113,12 +118,10 @@ void D::check(int new_val)
     cout << "Value = " << val << endl << "A's func called " << getA() << " times " << endl << "B's func called " << getB() << " times" << endl << "C's func called " << getC() << " times" << endl;
 }
 
-
 int main()
 {
     D d;
     int new_val;
     cin >> new_val;
     d.check(new_val);
-
 }
