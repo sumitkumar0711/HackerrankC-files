@@ -2,7 +2,8 @@
 #include <cstdio>
 using namespace std;
 
-int main() {
+int main() 
+{
     int n,i;
     scanf("%d",&n);
     for(i=1;i<=9;i++)
@@ -35,4 +36,3 @@ int main() {
     }
     return 0;
 }
-
