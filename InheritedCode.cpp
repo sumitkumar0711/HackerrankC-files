@@ -3,45 +3,59 @@
 #include <sstream>
 #include <exception>
 using namespace std;
-class BadLengthException {
+
+class BadLengthException 
+{
 private:
   int n;
-
 public:
-  BadLengthException(int errornumber) { n = errornumber; }
-
-  int what() { return n; }
+  BadLengthException(int errornumber) 
+  { n = errornumber; }
+  int what() 
+  { return n; }
 };
+
 /* Define the exception here */
 
-
-bool checkUsername(string username) {
+bool checkUsername(string username) 
+{
 	bool isValid = true;
 	int n = username.length();
-	if(n < 5) {
+	if(n < 5) 
+	{
 		throw BadLengthException(n);
 	}
-	for(int i = 0; i < n-1; i++) {
-		if(username[i] == 'w' && username[i+1] == 'w') {
+	for(int i = 0; i < n-1; i++) 
+	{
+		if(username[i] == 'w' && username[i+1] == 'w') 
+		{
 			isValid = false;
 		}
 	}
 	return isValid;
 }
 
-int main() {
+int main() 
+{
 	int T; cin >> T;
-	while(T--) {
+	while(T--) 
+	{
 		string username;
 		cin >> username;
-		try {
+		try 
+		{
 			bool isValid = checkUsername(username);
-			if(isValid) {
+			if(isValid) 
+			{
 				cout << "Valid" << '\n';
-			} else {
+			} 
+			else 
+			{
 				cout << "Invalid" << '\n';
 			}
-		} catch (BadLengthException e) {
+		} 
+		catch (BadLengthException e) 
+		{
 			cout << "Too short: " << e.what() << '\n';
 		}
 	}
